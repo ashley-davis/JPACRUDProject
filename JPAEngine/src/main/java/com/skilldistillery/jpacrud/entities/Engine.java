@@ -1,9 +1,11 @@
 package com.skilldistillery.jpacrud.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 @Entity
 public class Engine {
@@ -15,12 +17,16 @@ public class Engine {
 
 	private String name;
 	
+	@Column(name="size_in_liters")
 	private double sizeInLiters;
 	
+	@Column(name="num_cylinders")
 	private double numCylinders;
 	
+	@Column(name="fuel_type")
 	private String fuelType;
 	
+	@Column(name="fuel_system")
 	private String fuelSystem;
 	
 	private String configuration;
@@ -29,6 +35,7 @@ public class Engine {
 	
 	private int horsepower;
 	
+	@Column(name="origin_country")
 	private String originCountry;
 	
 	private String vehicle;
